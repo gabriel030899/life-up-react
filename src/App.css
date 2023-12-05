@@ -1,0 +1,524 @@
+* {
+  font-family: 'Archivo', sans-serif;
+}
+html{
+  margin: 0;
+  padding: 0;
+}
+body, #root, .main{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+/* Set the background color for the body */
+body {
+  box-sizing: border-box; /* Adjust box-sizing to border-box for consistency */
+  background: #D0D0D0;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.main_home, .main_contact{
+  width: 100%;
+  height: 100%;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #273833;
+  font-size: 15px;
+  z-index: 10;
+  position: relative;
+}
+.header a{
+  text-decoration: none;
+  color: white;
+}
+.login-register span{
+  color: white;
+}
+.header a:hover{
+  color: #00a775;
+}
+.header ul{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.header li{
+  list-style: none;
+  width: auto;
+}
+#header-logo-img{
+  height: 50px;
+  width: auto;
+  margin-left: 20px;
+}
+.login-register{
+  margin-right: 20px;
+}
+.user-info{
+  display: none;
+}
+.categoriesList {
+  display: none;
+  position: absolute;
+  height: 0;
+  top: 60px;
+  width: 100%;
+  background-color: #4a6d63;
+  color: white;
+  overflow: hidden;
+  opacity: 1;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+
+/* Adicione a classe "visible" para mostrar a div animada */
+.categoriesList.visible {
+  height: 60px; /* Altura desejada quando a div estiver visível */
+}
+
+/* Adicione animações se desejar */
+@keyframes slideDown {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.categoriesList.visible {
+  animation: slideDown 0.5s ease;
+}
+
+.categoriesList ul{
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.categoriesList li{
+  list-style: circle;
+  margin-right: 50px;
+}
+.categoriesList a{
+  text-decoration: none;
+  color: white;
+}
+.categoriesList a:hover{
+  color: #00a775;
+}
+
+/* HOME MAIN CONTENT */
+
+/* Apply a common font-family to all elements */
+
+
+/* Style the header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #273833;
+  height: 70px;
+  width: 100%;
+  /* position:fixed; */
+}
+
+
+/* Style the logo container */
+.div-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100%;
+}
+
+/* Style the logo image */
+.div-logo img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Style the top list container */
+#top-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+
+/* Style the top list links */
+#top-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  transition: color 0.3s ease-in-out;
+}
+#top-list a:hover{
+  color: #9dffca;
+}
+
+/* Style the login container */
+.div-login {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 400px;
+}
+
+/* Style the platform button */
+#button-plataforma {
+  text-decoration: none;
+  color: #9dffca;
+  font-size: 17px;
+  transition: color 0.3s ease-in-out;
+}
+#button-plataforma:hover{
+  color: #E9EBEA;
+}
+
+/* Style the subscribe button */
+.button-inscrever {
+  width: 120px;
+  height: 45px;
+  color: #273833;
+  background-color: #9dffca;
+  border: none; /* Simplify border style */
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.button-inscrever:hover {
+  color: #273833;
+  background-color: #E9EBEA;
+  
+}
+
+
+/* Style the who we are section*/
+.who-we-are-section {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  background-color: #375147;
+  color: #E9EBEA;
+}
+
+/*Style the who we are logo and slogan*/
+#logo-slogan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/*Style the logo*/
+#logo-slogan img {
+  height: 180px;
+  width: auto;
+}
+
+/*Style the slogan title*/
+#logo-slogan h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+/*Style the slogan text*/
+#logo-slogan h2 {
+  font-weight: 300;
+  font-style: italic;
+  color: #9dffca;
+}
+
+/*Style the slogan UP text*/
+#up-text-underline {
+  text-decoration: underline;
+  font-size: 25px;
+}
+
+/*Style the who we are text*/
+#who-we-are-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+/*Style the who we are text description*/
+#who-we-are-text p {
+  width: 90%;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+
+/* Style the who we are section*/
+.how-it-works-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  color: #375147;
+}
+
+/*Style the how it works classes images*/
+#classes-images {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+}
+
+/* Style the teacher image */
+#teacher-image {
+  width: 500px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+}
+
+#first-image-teacher {
+  width: 100%; /* Set the width to 100% to fill the container horizontally */
+  height: auto; /* Set the height to auto to maintain the original aspect ratio */
+  object-fit: cover;
+  
+}
+
+/* Style the student image */
+#student-image {
+  width: 500px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+}
+
+#second-image-student {
+  width: 100%; /* Set the width to 100% to fill the container horizontally */
+  height: auto; /* Set the height to auto to maintain the original aspect ratio */
+  object-fit: cover;
+}
+
+/*Style the how it works text*/
+#how-it-works-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 50%;
+  height: 100%;
+}
+
+/* Style the how it works title */
+#how-it-works-text h1{
+  font-weight: bolder;
+}
+
+/*Style the how it works text description*/
+#how-it-works-text p {
+  width: 90%;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* Style the platform section*/
+.platform-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  color: #375147;
+  background-color: #E9EBEA;
+}
+
+/*Style the platform classes images*/
+#platform-images {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+/* Style the platform image */
+#platform-image {
+  width: 700px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#first-image-platform {
+  width: 100%; /* Set the width to 100% to fill the container horizontally */
+  height: auto; /* Set the height to auto to maintain the original aspect ratio */
+  object-fit: cover;
+}
+
+/*Style the platform text*/
+#platform-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 50%;
+  height: 100%;
+}
+
+/* Style the platform title */
+#platform-text h1{
+  font-weight: bolder;
+}
+
+/*Style the platform text description*/
+#platform-text p {
+  width: 90%;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/*Style the How to Schedule Class section*/
+.how-to-schedule-class-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 350px;
+
+}
+/* Style the H1 on how to schedule class */
+.how-to-schedule-class-section h1{
+  font-weight: bolder;
+  color: #14163b;
+}
+
+/*Style the How to Schedule steps*/
+.how-to-schedule-steps{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+color: #14163b;
+text-transform: uppercase;
+font-size: 12px;
+font-weight: bolder;
+text-align: center;
+}
+/* Style the images on how to schedule steps */
+.how-to-schedule-steps img{
+  margin-bottom: 15px;
+  height: 60px;
+  width: auto;
+}
+
+/*Style each How to Schedule steps*/
+.how-to-schedule-step{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+/* Style the how to schedule separator */
+.how-to-schedule-separator{
+  height: 10px;
+  background-color:  #14163b;
+  width: 70%;
+  border-radius: 20px;
+}
+/* Style the up your life section */
+.up-your-life-section{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background-color: #375147;
+  color: #E9EBEA;
+}
+/* Style the up your life section logo */
+.up-your-life-section img{
+  width: auto;
+  height: 150px;
+  margin-left: 2%;
+}
+/* Style the up your life button div */
+.up-your-life-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+/* Style the up your life button div button */
+.up-your-life-button button{
+  color: #375147;
+  width: 150px;
+  animation: bn53bounce 4s infinite;
+}
+@keyframes bn53bounce {
+  5%,
+  50% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1) rotate(-5deg);
+  }
+
+  25% {
+    transform: scale(1) rotate(5deg);
+  }
+
+  30% {
+    transform: scale(1) rotate(-3deg);
+  }
+
+  35% {
+    transform: scale(1) rotate(2deg);
+  }
+
+  40% {
+    transform: scale(1) rotate(0);
+  }
+}
