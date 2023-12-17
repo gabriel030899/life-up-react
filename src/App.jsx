@@ -4,6 +4,8 @@ import HeaderCategories from './components/HeaderCategories';
 import HomeContent from './components/HomeContent';
 import './App.css';
 import { useState } from 'react';
+import GlobalStyle from './styles/global';
+import Register from './components/Register';
 
 
 function App() {
@@ -12,11 +14,11 @@ function App() {
 
   const handleLoginButtonClick = () => {
     setCurrentPage("login");
-  };
+  }; 
 
   return (
   
-    <div className="main">
+    <main className="main">
           {/* HOMEPAGE */}
           {
             currentPage === "home" && 
@@ -35,13 +37,14 @@ function App() {
             (
               <div className="main_contact">
                 <Header onLoginButtonClick={handleLoginButtonClick}/>
-                Logado
+                <Register />
               </div>
             )
           }
 
-    </div>
-
+    <GlobalStyle/>
+    </main>
+    
   );
 }
 

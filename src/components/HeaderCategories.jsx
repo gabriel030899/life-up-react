@@ -1,4 +1,4 @@
-//import {useState} from 'react'
+import '../HeaderCategories.css';
 
 const HeaderCategories = () => {
   const categories = [

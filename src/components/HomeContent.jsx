@@ -13,11 +13,15 @@ const HomeContent = () => {
                 <h2>Dê um <b id="up-text-underline">UP</b> na sua vida.</h2>
             </div>
             <div id="who-we-are-text">
-                <h1><b>QUEM SOMOS?</b></h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tortor odio, pretium id 
-                    enim sed, cursus elementum felis. Praesent sit amet imperdiet nibh. Donec congue 
-                    tellus sed justo laoreet, at fringilla est sodales. Curabitur purus tortor, accumsan 
-                    vitae ante eget, hendrerit convallis magna.</p>
+                <h1><b>APRIMORE-SE EM TODAS AS ÁREAS DA SUA VIDA</b></h1>
+                <ul>
+                    <li>Tenha aulas e consultorias particulares</li>
+                    <li>Fácil agendamento</li>
+                    <li>Profissionais dedicados à te ajudar</li>
+                </ul>
+                <p>Comece já a mudar sua vida!</p>
+                <button className="button-inscrever">Começar</button>
+                
             </div>
         </section>
 
@@ -53,7 +57,7 @@ const HomeContent = () => {
             <div className="how-to-schedule-steps">
                 <div className="how-to-schedule-step" id="create-account-step">
                     <img src="../public/icons/icons8-add-user-male-96.png" alt=""/>
-                    <h2>Inscreva-se</h2>
+                    <h2>Registre-se</h2>
                 </div>
                 <div className="how-to-schedule-separator"></div>
                 <div className="how-to-schedule-step" id="choose-teacher-step">
@@ -81,7 +85,7 @@ const HomeContent = () => {
             <img src="../public/logos/Life Up logo.png" alt=""/>
             <div className="up-your-life-button">
                 <h1>DÊ UM <b id="up-text-underline">UP</b> NA SUA VIDA</h1>
-                <button className="button-inscrever">Inscreva-se</button>
+                <button className="button-inscrever">Começar</button>
             </div>
         </section>
     </div>
